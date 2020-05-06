@@ -6,7 +6,7 @@ import style from './BurgerIngredient.module.css'
 class BurgerIngredient extends Component {
     render() {
         let ingredient = null
-        switch (props.type) {
+        switch (this.props.type) {
             case ('bread-bottom'):
                 ingredient = <div className={style.BreadBottom}></div>
                 break
@@ -37,7 +37,7 @@ class BurgerIngredient extends Component {
     }
 }
 
-BurgerIngredient.prototype = {
+BurgerIngredient.propTypes = {
     type: PropTypes.string.isRequired
 }
 
